@@ -1,7 +1,7 @@
 name: Test Project
 on: push
 jobs:
-  test:
+  testing:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -14,8 +14,8 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-    deploy:
-      needs: test
+    deploying:
+      needs: testing
       runs-on: ubuntu-latest
       steps:
         - name: Get code
